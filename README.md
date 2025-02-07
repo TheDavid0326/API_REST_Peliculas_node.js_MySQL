@@ -19,12 +19,6 @@ Esta es una aplicación de ejemplo que permite gestionar una base de datos de pe
      password: '',
      database: 'moviesdb'
    };
-const config = {
-  host: 'localhost',
-  port: 3306,
-  user: 'root',
-  password: '',
-  database: 'moviesdb'
 ```
 
 4. **Inicializa la base de datos con las tablas necesarias. Puedes utilizar el siguiente script SQL como ejemplo:**
