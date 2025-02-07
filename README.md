@@ -2,6 +2,17 @@
 
 Esta es una aplicación de ejemplo que permite gestionar una base de datos de películas utilizando Node.js y MySQL.
 
+## Tecnologías y Aprendizajes Clave
+
+En el desarrollo de esta aplicación, he utilizado y aprendido sobre varias tecnologías clave:
+
+- **Node.js**: Un entorno de ejecución para JavaScript en el lado del servidor.
+- **MySQL**: Un sistema de gestión de bases de datos relacional.
+- **MySQL2**: Un cliente MySQL mejorado para Node.js, con soporte para promesas.
+- **Express.js**: Un framework de aplicación web minimalista para Node.js.
+- **Zod**: Una biblioteca de validación de esquemas para TypeScript y JavaScript.
+- **HTTPie**: Una herramienta para hacer solicitudes HTTP y probar APIs.
+
 ## Configuración de la Base de Datos
 
 1. **Asegúrate de tener MySQL instalado y funcionando en tu máquina.**
@@ -172,4 +183,8 @@ Este proyecto está bajo la licencia MIT.
 
 ---
 
-Espero que este README te sea útil. Si tienes alguna otra pregunta o necesitas más ayuda, ¡házmelo saber!
+### Conclusión
+
+Este proyecto de gestión de películas ha sido una gran oportunidad para aplicar mis conocimientos en desarrollo backend con Node.js y MySQL, así como para aprender nuevas tecnologías y mejorar mis habilidades de desarrollo. La implementación de controladores, modelos y validaciones ha sido fundamental para estructurar la aplicación de manera eficiente y escalable.
+
+Agradezco cualquier feedback y contribuciones al proyecto. Si tienes alguna pregunta o sugerencia, ¡no dudes en contactarme!
