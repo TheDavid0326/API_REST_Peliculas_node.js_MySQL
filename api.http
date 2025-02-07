@@ -1,0 +1,84 @@
+### Recupera todas las películas
+GET http://localhost:1234/movies
+
+### Recupera películas por id
+GET http://localhost:1234/movies/2704e434-e3f7-11ef-b114-f0795930848c
+
+### Recupera películas por id
+GET http://localhost:1234/movies/1c910c8a-e25c-11ef-8a3b-f0795930848c
+
+### Recupera todas las películas por género
+GET http://localhost:1234/movies?genre=animation
+
+### Crea una película para probar a introducir con un único género que no estuviera ya en la lista
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Pacific Rim",
+  "year": 2013,
+  "director": "Guillermo del Toro",
+  "duration": 131, 
+  "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN85QeuAWcYaiMOLKbwDJRKH37QBj5Dk9sgw&s",
+  "genre": [
+    "Comedy"
+  ],
+  "rate": 7.1
+}
+
+### Crea una película
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+"title": "Avatar",
+    "year": 2009,
+    "director": "James Cameron",
+    "duration": 162,
+    "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rate": 7.8
+}
+
+### Crea una películas con datos erróneos
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": 100,
+  "year": "No tiene año",
+  "director": 656,
+  "duration": -56, 
+  "poster": "imagen.jpg",
+  "genre": [
+    "Algo",
+    "Rara"
+  ],
+  "rate": -5
+}
+
+### Actualiza una película
+PATCH http://localhost:1234/movies/2704e434-e3f7-11ef-b114-f0795930848c
+Content-Type: application/json
+
+{
+  "year": 2013
+}
+
+### Actualiza el género de una película
+PATCH http://localhost:1234/movies/2704e434-e3f7-11ef-b114-f0795930848c
+Content-Type: application/json
+
+{
+  "genre": [
+    "Action",
+    "Sci-fi"
+  ]
+}
+
+### Borra una película
+DELETE http://localhost:1234/movies/670ca5fc-e315-11ef-86a2-f0795930848c

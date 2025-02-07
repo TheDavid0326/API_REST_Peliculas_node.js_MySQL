@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Probar API Rest</title>
+</head>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  img {
+    height: auto;
+    width: 320px;
+    max-width: 90%;
+  }
+</style>
+
+<script type="module">
+  fetch('http://localhost:1234/movies').then((res) => res.json())
+    .then((movies) => {
+      const html = movies.map(movie => {
+        return `
+        <article data-id="${movie.id}">
+          <h2> ${movie.title} </h2>
+          <img src="${movie.poster}" alt="${movie.title}">
+          <h3>${movie.year}</h3>
+
+          <button>Eliminar</button>
+        </article> ` // Con MAP se obtiene un array donde cada elemento es una cadena de texto HTML.
+      }).join(''); // Método de arrays que une todos los elementos en una sola cadena de texto.
+
+      document.querySelector('main').innerHTML = html;
+
+      document.addEventListener('click', (evento) => {
+        if (evento.target.matches('button')) {
+          const article = evento.target.closest('article');
+          const id = article.dataset.id; // Se usa la propiedad dataset del elemento, permite acceder a todos los atributos data-.
+
+          fetch(`http://localhost:1234/movies/${id}`, {
+            method: 'DELETE'
+          }).then(res => {
+            if (res.ok) {
+              article.remove();
+              updateElement('statusMessage', `La película con ID ${id} ha sido eliminada.`);
+            }
+          })
+        }
+      })
+    })
+</script>
+
+<body>
+  <main></main>
+</body>
+
+</html>
