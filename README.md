@@ -2,7 +2,7 @@
 
 Esta es una aplicación de ejemplo que permite gestionar una base de datos de películas utilizando Node.js y MySQL.
 
-## Tecnologías y Aprendizajes Clave
+## Tecnologías
 
 En el desarrollo de esta aplicación, he utilizado y aprendido sobre varias tecnologías clave:
 
@@ -12,6 +12,26 @@ En el desarrollo de esta aplicación, he utilizado y aprendido sobre varias tecn
 - **Express.js**: Un framework de aplicación web minimalista para Node.js.
 - **Zod**: Una biblioteca de validación de esquemas para TypeScript y JavaScript.
 - **HTTPie**: Una herramienta para hacer solicitudes HTTP y probar APIs.
+
+## Aprendizajes Clave
+
+- **Configuración del Servidor**:
+  - Aprendí a configurar un entorno de ejecución de Node.js para manejar tanto solicitudes HTTP como conexiones con bases de datos.
+
+- **Gestión de Bases de Datos**:
+  - Gané experiencia en la configuración y gestión de una base de datos MySQL, incluyendo la creación de tablas y la ejecución de consultas SQL.
+
+- **Modelado de Datos**:
+  - Desarrollé habilidades en la estructuración de modelos de datos relacionales y en la gestión de relaciones entre diferentes entidades.
+
+- **Validación de Datos**:
+  - Implementé validaciones robustas para asegurar la integridad y consistencia de los datos ingresados.
+
+- **Desarrollo de API RESTful**:
+  - Aprendí a diseñar y construir endpoints para la gestión de recursos utilizando las mejores prácticas en la creación de API RESTful.
+
+- **Pruebas de API**:
+  - Utilicé herramientas para realizar solicitudes HTTP y probar la funcionalidad de la API de manera efectiva.
 
 ## Configuración de la Base de Datos
 
